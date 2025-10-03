@@ -39,20 +39,6 @@ export const uploadMiddleware = multer({
   },
 }).single('file');
 
-// Uncomment to test the Cloudinary connection
-/*
-export const testCloudinaryConnection = async () => {
-  try {
-    const result = await cloudinary.api.ping();
-    console.log('Cloudinary connection test successful:', result);
-    return true;
-  } catch (error) {
-    console.error('Cloudinary connection test failed:', error);
-    return false;
-  }
-};
-*/
-
 // Utility function to delete file from Cloudinary
 export const deleteFromCloudinary = async (publicId) => {
   try {

@@ -40,17 +40,6 @@ app.get('/api/health', (req, res) => {
 // Error handler
 app.use(errorHandler);
 
-//For cloudinary tests. Uncomment to test.
-/*
-testCloudinaryConnection().then(isConnected => {
-  if (!isConnected) {
-    console.error('Cloudinary connection failed. Check environment variables.');
-  } else {
-    console.log('Cloudinary connected successfully');
-  }
-});
-*/
-
 // DB connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
